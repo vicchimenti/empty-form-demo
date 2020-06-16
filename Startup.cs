@@ -19,7 +19,8 @@ namespace empty_form_demo
         {
             services.AddMvc();
 /*            MvcOptions.EnableEndpointRouting = false;
-*/        }
+*/        
+        }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -40,6 +41,7 @@ namespace empty_form_demo
                     await context.Response.WriteAsync("Hello World!");
                 });
             });
-        }*/
+*/
+        }
     }
 }

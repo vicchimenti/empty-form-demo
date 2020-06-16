@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
@@ -17,7 +18,8 @@ namespace empty_form_demo
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-        }
+/*            MvcOptions.EnableEndpointRouting = false;
+*/        }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -27,6 +29,8 @@ namespace empty_form_demo
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseMvc();
+
 /*            app.UseRouting();
 
             app.UseEndpoints(endpoints =>
@@ -35,7 +39,7 @@ namespace empty_form_demo
                 {
                     await context.Response.WriteAsync("Hello World!");
                 });
-            });*/
-        }
+            });
+        }*/
     }
 }

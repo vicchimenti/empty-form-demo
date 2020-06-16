@@ -27,7 +27,7 @@ namespace empty_form_demo
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseRouting();
+/*            app.UseRouting();
 
             app.UseEndpoints(endpoints =>
             {
@@ -35,7 +35,7 @@ namespace empty_form_demo
                 {
                     await context.Response.WriteAsync("Hello World!");
                 });
-            });
+            });*/
         }
     }
 }
